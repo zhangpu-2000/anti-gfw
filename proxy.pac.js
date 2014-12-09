@@ -1,0 +1,158 @@
+function FindProxyForURL(url, host) {
+  var direct = 'DIRECT';
+  var http_proxy = 'PROXY 192.168.1.3:8080';
+  var socks_proxy = 'SOCKS5 192.168.1.106:1080; SOCKS 192.168.1.106:1080'
+  var blocked_list = [
+    'dropbox',
+    'twitter',
+    'bit.ly',
+    'mobilepicture',
+    'tinypic',
+    'twitpic',
+    'yfrog',
+    'twimg',
+    't.co',
+    'google',
+    'blogspot',
+    'gstatic',
+    'ggpht',
+    'appspot',
+    'blogger',
+    'keyhole',
+    'feedburner',
+    'gmail',
+    'android.com',
+    'panoramio',
+    'youtube',
+    'ytimg',
+    'facebook',
+    'fbcdn',
+    'quora',
+    'godaddy',
+    'instagram',
+    // misc cdn & ads
+    //"akamai",
+    //"akamaihd",
+    '2mdn.net',
+    'geotrust.com',
+    'digicert',
+    'cloudfront',
+    'doubleclick',
+    'torproject',
+    'sstatic',
+    'wiki',
+    'github',
+    'stackoverflow',
+    'boxun',
+    'epochtimes',
+    'aboluowang',
+    'shadowsocks',
+
+    ////////////////////
+    // GREAT FIRE WALL
+    ////////////////////
+    'facebook.com',
+    'youtube.com',
+    'twitter.com',
+    'blogspot.com',
+    'blogger.com',
+    'netflix.com',
+    't.co',
+    'blogspot.in',
+    'dailymotion.com',
+    'youporn.com',
+    'nytimes.com',
+    'pixnet.net',
+    'slideshare.net',
+    'hootsuite.com',
+    'soundcloud.com',
+    'archive.org',
+    'blogspot.com.br',
+    'hardsextube.com',
+    'mobile01.com',
+    'bloomberg.com',
+    'elpais.com',
+    'blogspot.de',
+    'adultfriendfinder.com',
+    'xing.com',
+    'eyny.com',
+    'istockphoto.com',
+    'swagbucks.com',
+    'macys.com',
+    'drtuber.com',
+    'liveleak.com',
+    'lemonde.fr',
+    'turbobit.net',
+    'blogspot.jp',
+    'cam4.com',
+    'spankwire.com',
+    'nuvid.com',
+    'sex.com',
+    'subito.it',
+    'bitshare.com',
+    'yourlust.com',
+    'pastebin.com',
+    'pchome.com.tw',
+    'redtube.com',
+    'vimeo.com',
+    'wordpress.com',
+    'dropbox.com',
+    'xvideos.com',
+    'blogspot.com.es',
+    'fc2.com',
+    'tube8.com',
+    'ck101.com',
+    'hidemyass.com',
+    'wsj.com',
+    'xtube.com',
+    '123rf.com',
+    'xhamster.com',
+    'change.org',
+    'bet365.com',
+    'theguardian.com',
+    'pornhublive.com',
+    'feedburner.com',
+    'pornhub.com'
+  ];
+
+  // is in blocked_list?
+  blocked = function(host_name) {
+    var matched = 0;
+    var host_name = host_name;
+    blocked_list.forEach(function(item) {
+      if ((new RegExp(item)).test(host_name)) {
+        matched += 1;
+      }
+    });
+    if (matched > 1) { matched = 1 }
+    return matched;
+  }
+
+  // debugPAC ="PAC Debug Information\n";
+  // debugPAC +="-----------------------------------\n";
+  // debugPAC +="Machine IP: " + myIpAddress() + "\n";
+  // debugPAC +="Hostname: " + host + "\n";
+  // if (isResolvable(host)) {resolvableHost = "True"} else {resolvableHost = "False"};
+  // debugPAC +="Host Resolvable: " + resolvableHost + "\n";
+  // debugPAC +="Hostname IP: " + dnsResolve(host) + "\n";
+  // if (isPlainHostName(host)) {plainHost = "True"} else {plainHost = "False"};
+  // debugPAC +="Plain Hostname: " + plainHost + "\n";
+  // debugPAC +="Domain Levels: " + dnsDomainLevels(host) + "\n";
+  // debugPAC +="URL: " + url + "\n";
+
+  // // Protocol can only be determined by reading the entire URL.
+  // if (url.substring(0,5)=="http:") {protocol="HTTP";} else
+  //     if (url.substring(0,6)=="https:") {protocol="HTTPS";} else
+  //         if (url.substring(0,4)=="ftp:") {protocol="FTP";}
+  //             else {protocol="Unknown";}
+  // debugPAC +="Protocol: " + protocol + "\n";
+
+  // alert(debugPAC);
+
+  if (blocked(host) == true) {
+    //alert("PROXYED!! :: " + host );
+  } else {
+    alert("No! -_-! " + url);
+  }
+  return blocked(host) ? http_proxy + '; ' + socks_proxy : direct;
+};
