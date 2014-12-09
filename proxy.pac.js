@@ -1,7 +1,7 @@
 function FindProxyForURL(url, host) {
   var direct = 'DIRECT';
-  var http_proxy = 'PROXY 192.168.1.3:8080';
-  var socks_proxy = 'SOCKS5 192.168.1.106:1080; SOCKS 192.168.1.106:1080'
+  var http_proxy = 'PROXY ' + dnsResolve('http-server') + ':8080';
+  var socks_proxy = 'SOCKS5 ' + dnsResolve('socks-server') + ':1080';
   var blocked_list = [
     ///////////////////////
     // self inspired list
