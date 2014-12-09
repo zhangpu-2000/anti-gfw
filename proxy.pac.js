@@ -3,6 +3,9 @@ function FindProxyForURL(url, host) {
   var http_proxy = 'PROXY 192.168.1.3:8080';
   var socks_proxy = 'SOCKS5 192.168.1.106:1080; SOCKS 192.168.1.106:1080'
   var blocked_list = [
+    ///////////////////////
+    // self inspired list
+    ///////////////////////
     'dropbox',
     'twitter',
     'bit.ly',
@@ -12,6 +15,7 @@ function FindProxyForURL(url, host) {
     'yfrog',
     'twimg',
     't.co',
+    'wordpress',
     'google',
     'blogspot',
     'gstatic',
@@ -30,27 +34,41 @@ function FindProxyForURL(url, host) {
     'quora',
     'godaddy',
     'instagram',
-    // misc cdn & ads
-    //"akamai",
-    //"akamaihd",
+    'flickr',
     '2mdn.net',
-    'geotrust.com',
+    'optimizely',
+    'geotrust',
     'digicert',
     'cloudfront',
-    'doubleclick',
     'torproject',
     'sstatic',
-    'wiki',
+    'wiki', // 管它哪个wiki，一律翻
     'github',
-    'stackoverflow',
     'boxun',
     'epochtimes',
+    'dajiyuan',
     'aboluowang',
     'shadowsocks',
+    'minghui',
+    'noip',
+    'no-ip',
+    'dyndns',
+    '6park',
+    'dongtaiwang',
+    'ntdtv.com',
+    'kanzhongguo',
+    'zhengjian',
+    'wujie',
+    'voanews',
+    '.hk', // 香港
+    '.tw', // 台湾
+    'yahoo',
+    'linkedin',
+    'imgur',
 
-    ////////////////////
-    // GREAT FIRE WALL
-    ////////////////////
+    /////////////////////////////////////
+    // GREAT FIRE WALLed hot domain list
+    /////////////////////////////////////
     'facebook.com',
     'youtube.com',
     'twitter.com',
