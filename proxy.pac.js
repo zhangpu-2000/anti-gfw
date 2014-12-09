@@ -17,6 +17,7 @@ function FindProxyForURL(url, host) {
     't.co',
     'wordpress',
     'google',
+    'goo.gl',
     'blogspot',
     'gstatic',
     'ggpht',
