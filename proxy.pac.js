@@ -162,11 +162,11 @@ function FindProxyForURL(url, host) {
   // debugPAC +="Protocol: " + protocol + "\n";
 
   // alert(debugPAC);
+  // if (blocked(host) == true) {
+  //   alert("PROXYED!! :: " + host );
+  // } else {
+  //   alert("No! -_-! " + url);
+  // }
 
-  if (blocked(host) == true) {
-    //alert("PROXYED!! :: " + host );
-  } else {
-    alert("No! -_-! " + url);
-  }
   return blocked(host) ? http_proxy + '; ' + socks_proxy : direct;
 };
