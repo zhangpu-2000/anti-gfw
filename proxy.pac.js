@@ -134,15 +134,12 @@ function FindProxyForURL(url, host) {
 
   // is in blocked_list?
   blocked = function(host_name) {
-    var matched = 0;
-    var host_name = host_name;
-    blocked_list.forEach(function(item) {
-      if ((new RegExp(item)).test(host_name)) {
-        matched += 1;
+    for (i = 0; i < blocked_list.length; i++) {
+      if ((new RegExp(blocked_list[i])).test(host_name)) {
+        return true;
       }
-    });
-    if (matched > 1) { matched = 1 }
-    return matched;
+    }
+    return false;
   }
 
   // debugPAC ="PAC Debug Information\n";
