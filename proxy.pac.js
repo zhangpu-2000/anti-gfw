@@ -36,11 +36,9 @@ function FindProxyForURL(url, host) {
     'godaddy',
     'instagram',
     'flickr',
-    '2mdn.net',
     'optimizely',
     'geotrust',
     'digicert',
-    'cloudfront',
     'torproject',
     'sstatic',
     'wiki', // 管它哪个wiki，一律翻
