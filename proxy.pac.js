@@ -64,6 +64,8 @@ function FindProxyForURL(url, host) {
     'yahoo',
     'linkedin',
     'imgur',
+		'fangzhouzi',
+		'fangshimin',
 
     /////////////////////////////////////
     // GREAT FIRE WALLed hot domain list
