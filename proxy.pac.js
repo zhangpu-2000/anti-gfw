@@ -14,7 +14,7 @@ function FindProxyForURL(url, host) {
     'twitpic',
     'yfrog',
     'twimg',
-    't.co',
+    '^t.co$', // 因为这个域名太短实在是个特例，所以必需头尾匹配，否则会把microsoft.com都给翻墙
     'wordpress',
     'google',
     'goo.gl',
@@ -76,7 +76,6 @@ function FindProxyForURL(url, host) {
     'blogspot.com',
     'blogger.com',
     'netflix.com',
-    't.co',
     'blogspot.in',
     'dailymotion.com',
     'youporn.com',
