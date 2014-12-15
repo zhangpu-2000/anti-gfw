@@ -169,5 +169,5 @@ function FindProxyForURL(url, host) {
   //   alert("No! -_-! " + url);
   // }
 
-  return blocked(host) ? http_proxy + '; ' + socks_proxy : direct;
+  return blocked(host) ? http_proxy + '; ' + socks_proxy + '; ' + 'DIRECT' : direct;
 };
