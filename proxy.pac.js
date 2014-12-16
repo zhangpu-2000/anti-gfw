@@ -66,6 +66,7 @@ function FindProxyForURL(url, host) {
     'imgur',
     'fangzhouzi',
     'fangshimin',
+    'typekit', // adobe typekit.com, typekit.net
 
     /////////////////////////////////////
     // GREAT FIRE WALLed hot domain list
@@ -80,6 +81,7 @@ function FindProxyForURL(url, host) {
     'dailymotion.com',
     'youporn.com',
     'nytimes.com',
+    'nyt.com',
     'pixnet.net',
     'slideshare.net',
     'hootsuite.com',
