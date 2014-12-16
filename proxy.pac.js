@@ -67,6 +67,7 @@ function FindProxyForURL(url, host) {
     'fangzhouzi',
     'fangshimin',
     'typekit', // adobe typekit.com, typekit.net
+    'sourceforge',
 
     /////////////////////////////////////
     // GREAT FIRE WALLed hot domain list
