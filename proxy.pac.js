@@ -9,6 +9,7 @@ function FindProxyForURL(url, host) {
     'dropbox',
     'twitter',
     'bit.ly',
+    'bitly',
     'mobilepicture',
     'tinypic',
     'twitpic',
@@ -72,6 +73,7 @@ function FindProxyForURL(url, host) {
     'wsj', // wsj.com, wsj.net
     'qz.com',
     'gravatar',
+    'j.mp',
 
     /////////////////////////////////////
     // GREAT FIRE WALLed hot domain list
