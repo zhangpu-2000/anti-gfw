@@ -68,6 +68,10 @@ function FindProxyForURL(url, host) {
     'fangshimin',
     'typekit', // adobe typekit.com, typekit.net
     'sourceforge',
+    'wp.com',
+    'wsj', // wsj.com, wsj.net
+    'qz.com',
+    'gravatar',
 
     /////////////////////////////////////
     // GREAT FIRE WALLed hot domain list
