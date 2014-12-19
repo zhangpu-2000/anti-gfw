@@ -8,17 +8,17 @@ function FindProxyForURL(url, host) {
     ///////////////////////
     'dropbox',
     'twitter',
-    'bit\.ly',
+    'bit.ly',
     'bitly',
     'mobilepicture',
     'tinypic',
     'twitpic',
     'yfrog',
     'twimg',
-    '^t\.co$', // 因为这个域名太短实在是个特例，所以必需头尾匹配，否则会把microsoft.com都给翻墙
+    '^t.co$', // 因为这个域名太短实在是个特例，所以必需头尾匹配，否则会把microsoft.com都给翻墙
     'wordpress',
     'google',
-    'goo\.gl',
+    'goo.gl',
     'blogspot',
     'gstatic',
     'ggpht',
@@ -27,7 +27,7 @@ function FindProxyForURL(url, host) {
     'keyhole',
     'feedburner',
     'gmail',
-    'android\.com',
+    'android.com',
     'panoramio',
     'youtube',
     'ytimg',
@@ -60,8 +60,8 @@ function FindProxyForURL(url, host) {
     'zhengjian',
     'wujie',
     'voanews',
-    '\.hk', // 香港
-    '\.tw', // 台湾
+    '.hk', // 香港
+    '.tw', // 台湾
     'yahoo',
     'linkedin',
     'imgur',
@@ -69,13 +69,13 @@ function FindProxyForURL(url, host) {
     'fangshimin',
     'typekit', // adobe typekit.com, typekit.net
     'sourceforge',
-    'wp\.com',
+    'wp.com',
     'wsj', // wsj.com, wsj.net
-    'qz\.com',
+    'qz.com',
     'gravatar',
-    'j\.mp', // bitly 另一个短网址服务
+    'j.mp', // bitly 另一个短网址服务
     'cloudfront',
-    'amazonaws\.com',
+    'amazonaws.com',
 
     /////////////////////////////////////
     // GREAT FIRE WALLed hot domain list
@@ -147,7 +147,8 @@ function FindProxyForURL(url, host) {
   // is in blocked_list?
   blocked = function(host_name) {
     for (i = 0; i < blocked_list.length; i++) {
-      if ((new RegExp(blocked_list[i])).test(host_name)) {
+      str = blocked_list[i].replace('.', '\\.'); // 批量转义 .
+      if ((new RegExp(str)).test(host_name)) {
         return true;
       }
     }
