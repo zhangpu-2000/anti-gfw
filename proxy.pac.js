@@ -76,6 +76,9 @@ function FindProxyForURL(url, host) {
     'j.mp', // bitly 另一个短网址服务
     'cloudfront',
     'amazonaws.com',
+    'disqus',
+    'gae',
+
 
     /////////////////////////////////////
     // GREAT FIRE WALLed hot domain list
