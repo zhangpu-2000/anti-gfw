@@ -6,6 +6,7 @@ function FindProxyForURL(url, host) {
     ///////////////////////
     // self inspired list
     ///////////////////////
+    'gmail',
     'dropbox',
     'twitter',
     'bit.ly',
