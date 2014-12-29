@@ -18,7 +18,8 @@ function FindProxyForURL(url, host) {
     'twimg',
     '^t.co$', // 因为这个域名太短实在是个特例，所以必需头尾匹配，否则会把microsoft.com都给翻墙
     'wordpress',
-    'google',
+    'google(?!\\S*doubleclick.net)',
+    //'google',
     'goo.gl',
     'blogspot',
     'gstatic',
