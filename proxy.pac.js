@@ -80,6 +80,7 @@ function FindProxyForURL(url, host) {
     'amazonaws.com',
     'disqus',
     'gae',
+    'ow.ly',
 
 
     /////////////////////////////////////
