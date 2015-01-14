@@ -62,6 +62,7 @@ function FindProxyForURL(url, host) {
     'zhengjian',
     'wujie',
     'voanews',
+    'voachinese',
     '.hk', // 香港
     '.tw', // 台湾
     'yahoo',
@@ -81,6 +82,7 @@ function FindProxyForURL(url, host) {
     'disqus',
     'gae',
     'ow.ly',
+    'lvv2.com',
 
 
     /////////////////////////////////////
