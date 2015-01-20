@@ -83,6 +83,7 @@ function FindProxyForURL(url, host) {
     'gae',
     'ow.ly',
     'lvv2.com',
+    'omnigroup',
 
 
     /////////////////////////////////////
